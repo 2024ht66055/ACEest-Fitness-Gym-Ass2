@@ -23,4 +23,17 @@ Python Project that helps to journal your fitness routines, by logging your Fitn
 ---
 ## 📦 Installation
 # Clone the repo
-git clone https://github.com/PavanPuvvada-66012/DevOps_Assignment1.git
+git clone https://github.com/2024ht66055/ACEest-Fitness-Gym.git
+# Navigate into the project
+cd ACEest-Fitness-Gym
+
+# Install dependencies
+pip install -r requirements.txt
+```
+---
+## 🚀 Usage
+```
+python src/aceest_fitness.py 
+```
+The ACEest Fitness application interface will open, allowing the user to manage gym clients, workouts, and progress tracking.
+<img width="455" height="206" alt="image" src="https://github.com/user-attachments/assets/67b5df68-fb2e-4ccf-8456-ed6f4cd7103b" />
