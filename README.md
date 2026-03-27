@@ -37,4 +37,12 @@ python src/aceest_fitness.py
 ```
 The ACEest Fitness application interface will open, allowing the user to manage gym clients, workouts, and progress tracking.
 
-<img width="455" height="206" alt="image" src="https://github.com/user-attachments/assets/67b5df68-fb2e-4ccf-8456-ed6f4cd7103b" />
+Application is accessible via http://127.0.0.1:5000/
+
+- <img width="455" height="206" alt="image" src="https://github.com/user-attachments/assets/67b5df68-fb2e-4ccf-8456-ed6f4cd7103b" />
+
+- <img width="448" height="303" alt="image" src="https://github.com/user-attachments/assets/0b8c02cc-9711-4320-bae3-ef524e3027af" />
+
+- <img width="511" height="332" alt="image" src="https://github.com/user-attachments/assets/7fb5496f-e2df-49da-89fe-941aedf624b0" />
+
+
