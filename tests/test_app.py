@@ -3,7 +3,7 @@ import sys
 
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
-from app import app
+from appv1 import app
 
 def test_home_page():
     client = app.test_client()
