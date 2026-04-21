@@ -2,21 +2,23 @@ pipeline {
     agent any
 
     stages {
-        stage('Checkout') {
+
+        stage('Clone Repository') {
             steps {
-                checkout scm
+                git 'https://github.com/YOUR-USERNAME/YOUR-REPO.git'
             }
         }
 
-        stage('Build Docker Image') {
+        stage('Install Dependencies') {
             steps {
-                sh 'docker build -t 2024ht66055 .'
+                bat 'pip install -r requirement'
+                bat 'pip install pytest'
             }
         }
 
-        stage('Run Tests in Docker') {
+        stage('Run Tests') {
             steps {
-                sh 'docker run --rm 2024ht66055 pytest'
+                bat 'pytest'
             }
         }
     }
