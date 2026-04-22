@@ -3,7 +3,6 @@
 # Version: v1
 # Description: Basic Flask application with client and workout management
 # ============================================
-# ==========================================
 from flask import Flask, request
 import sqlite3
 import random
