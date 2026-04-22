@@ -174,10 +174,18 @@ def get_workouts_for_client(client_name):
   #  <p><a href="/login">Go to Login</a></p>
   #  <p><a href="/clients">Manage Clients</a></p>
    # """
+#@app.route("/")
+#def home():
+ #   return """
+  #  <h1>🔵 BLUE VERSION - ACEest Fitness Flask App</h1>
+   # <p><a href="/init-db">Initialize Database</a></p>
+    #<p><a href="/login">Go to Login</a></p>
+    #<p><a href="/clients">Manage Clients</a></p>
+    #"""
 @app.route("/")
 def home():
     return """
-    <h1>🔵 BLUE VERSION - ACEest Fitness Flask App</h1>
+    <h1 style='color:blue'>🔵 BLUE VERSION - ACEest Fitness Flask App</h1>
     <p><a href="/init-db">Initialize Database</a></p>
     <p><a href="/login">Go to Login</a></p>
     <p><a href="/clients">Manage Clients</a></p>
