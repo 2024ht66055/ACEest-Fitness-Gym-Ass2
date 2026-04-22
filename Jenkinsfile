@@ -19,5 +19,11 @@ pipeline {
                 bat 'docker run --rm 2024ht66055 pytest'
             }
         }
+
+        stage('Archive Build Artifacts') {
+            steps {
+                archiveArtifacts artifacts: '**/*', fingerprint: true
+            }
+        }
     }
 }
