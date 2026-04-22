@@ -10,7 +10,7 @@ COPY . .
 
 EXPOSE 5000
 
-CMD ["python", "appv2.py"]
+CMD ["python", "appv3.py"]
 
 #CMD ["python", "appv2.py"]
 
