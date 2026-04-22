@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
       - name: gym-container
-        image: 2024ht66055/appv2:v2
+        image: 2024ht66055/appv3:v3
         ports:
         - containerPort: 5000
