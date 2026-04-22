@@ -2,12 +2,10 @@ pipeline {
     agent any
 
     stages {
-<<<<<<< HEAD
+
         stage('Checkout') {
-=======
 
         stage('Checkout Code') {
->>>>>>> origin/main
             steps {
                 checkout scm
             }
@@ -15,7 +13,6 @@ pipeline {
 
         stage('Build Docker Image') {
             steps {
-<<<<<<< HEAD
                 bat 'docker build -t 2024ht66055 .'
             }
         }
@@ -27,7 +24,6 @@ pipeline {
         }
 
         stage('Archive Build Artifacts') {
-=======
                 bat 'docker build -t 2024ht66055/appv2:v2 .'
             }
         }
@@ -54,14 +50,11 @@ pipeline {
         }
 
         stage('Archive Artifacts') {
->>>>>>> origin/main
             steps {
                 archiveArtifacts artifacts: '**/*', fingerprint: true
             }
         }
     }
-<<<<<<< HEAD
-=======
 
     post {
         success {
@@ -71,5 +64,4 @@ pipeline {
             echo 'Pipeline failed. Check logs.'
         }
     }
->>>>>>> origin/main
 }
