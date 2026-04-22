@@ -11,13 +11,13 @@ pipeline {
 
         stage('Build Docker Image') {
             steps {
-                bat 'docker build -t 2024ht66055/appv1:v1 .'
+                bat 'docker build -t 2024ht66055/appv2:v2 .'
             }
         }
 
         stage('Run Unit Tests (Pytest in Docker)') {
             steps {
-                bat 'docker run --rm 2024ht66055/appv1:v1 pytest'
+                bat 'docker run --rm 2024ht66055/appv2:v2 pytest'
             }
         }
 
@@ -28,7 +28,7 @@ pipeline {
                                                   passwordVariable: '123456789')]) {
                     bat '''
                     docker login -u %USER% -p %PASS%
-                    docker push 2024ht66055/appv1:v2
+                    docker push 2024ht66055/appv2:v2
                     '''
                 }
             }
