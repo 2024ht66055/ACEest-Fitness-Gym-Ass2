@@ -20,10 +20,16 @@ pipeline {
         }
 
         stage('Run Unit Tests') {
-            steps {
-               bat "docker run --rm %IMAGE_NAME% pytest --cov=."
-            }
-        }
+    steps {
+       bat """
+       docker run --rm ^
+       -v "%WORKSPACE%":/app ^
+       -w /app ^
+       %IMAGE_NAME% ^
+       pytest --cov=appv1 --cov=appv2 --cov=appv3 --cov-report=xml
+       """
+    }
+}
 
         stage('SonarQube Analysis') {
     steps {
@@ -36,7 +42,8 @@ pipeline {
                 -v "%WORKSPACE%":/usr/src ^
                 sonarsource/sonar-scanner-cli ^
                 -Dsonar.projectKey=gym-app ^
-                -Dsonar.sources=.
+                -Dsonar.sources=. ^
+                -Dsonar.python.coverage.reportPaths=coverage.xml 
                 """
             }
         }
