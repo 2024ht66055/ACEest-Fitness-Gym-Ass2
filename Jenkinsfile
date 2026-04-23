@@ -3,8 +3,6 @@ pipeline {
 
     stages {
 
-        stage('Checkout') {
-
         stage('Checkout Code') {
             steps {
                 checkout scm
@@ -13,24 +11,31 @@ pipeline {
 
         stage('Build Docker Image') {
             steps {
-                bat 'docker build -t 2024ht66055 .'
-            }
-        }
-
-        stage('Run Tests in Docker') {
-            steps {
-                bat 'docker run --rm 2024ht66055 pytest'
-            }
-        }
-
-        stage('Archive Build Artifacts') {
                 bat 'docker build -t 2024ht66055/appv2:v2 .'
             }
         }
 
-        stage('Run Unit Tests (Pytest in Docker)') {
+        stage('Run Unit Tests') {
             steps {
                 bat 'docker run --rm 2024ht66055/appv2:v2 pytest'
+            }
+        }
+
+        stage('SonarQube Analysis') {
+            steps {
+                withSonarQubeEnv('SonarQube') {
+                    withCredentials([string(credentialsId: 'sonar-token', variable: 'SONAR_TOKEN')]) {
+                        bat """
+                        docker run --rm ^
+                        -e SONAR_HOST_URL=http://host.docker.internal:9000 ^
+                        -e SONAR_LOGIN=%SONAR_TOKEN% ^
+                        -v %cd%:/usr/src ^
+                        sonarsource/sonar-scanner-cli ^
+                        -Dsonar.projectKey=gym-app ^
+                        -Dsonar.sources=.
+                        """
+                    }
+                }
             }
         }
 
@@ -42,7 +47,7 @@ pipeline {
                     passwordVariable: 'PASS'
                 )]) {
                     bat '''
-                    docker login -u %USER% -p %PASS%
+                    echo %PASS% | docker login -u %USER% --password-stdin
                     docker push 2024ht66055/appv2:v2
                     '''
                 }
