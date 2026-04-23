@@ -166,17 +166,32 @@ def get_workouts_for_client(client_name):
     conn.close()
     return rows
 
+#@app.route("/")
+#def home():
+ #   return """
+#h1 style='color:blue;'>🏋️ ACEest Fitness Dashboard</h1>
+#<p>Welcome to the Gym Management System</p>
+#<hr>
+#<p><a href="/init-db">Initialize Database</a></p>
+#<p><a href="/login">Login</a></p>
+#<p><a href="/clients">Manage Clients</a></p>
+#"""
+#@app.route("/")
+#def home():
+ #   return """
+  #  <h1>🟢 GREEN VERSION - ACEest Fitness Flask App</h1>
+   # <p><a href="/init-db">Initialize Database</a></p>
+    #<p><a href="/login">Go to Login</a></p>
+    #<p><a href="/clients">Manage Clients</a></p>
+    #"""
 @app.route("/")
 def home():
     return """
-<h1 style='color:blue;'>🏋️ ACEest Fitness Dashboard</h1>
-<p>Welcome to the Gym Management System</p>
-<hr>
-<p><a href="/init-db">Initialize Database</a></p>
-<p><a href="/login">Login</a></p>
-<p><a href="/clients">Manage Clients</a></p>
-"""
-
+    <h1 style='color:green'>🟢 GREEN VERSION - ACEest Fitness Flask App</h1>
+    <p><a href="/init-db">Initialize Database</a></p>
+    <p><a href="/login">Go to Login</a></p>
+    <p><a href="/clients">Manage Clients</a></p>
+    """
 @app.route("/init-db")
 def initialize_database():
     init_db()

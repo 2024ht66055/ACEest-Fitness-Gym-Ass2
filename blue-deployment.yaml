@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: gym-blue
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: gym
+      version: blue
+  template:
+    metadata:
+      labels:
+        app: gym
+        version: blue
+    spec:
+      containers:
+      - name: gym-container
+        image: 2024ht66055/appv2:v2
+        ports:
+        - containerPort: 5000
