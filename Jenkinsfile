@@ -21,7 +21,7 @@ pipeline {
 
         stage('Run Unit Tests') {
             steps {
-                bat "docker run --rm %IMAGE_NAME% pytest"
+               bat "docker run --rm %IMAGE_NAME% pytest --cov=."
             }
         }
 
