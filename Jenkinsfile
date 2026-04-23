@@ -1,6 +1,10 @@
 pipeline {
     agent any
 
+    environment {
+        IMAGE_NAME = "2024ht66055/appv2:v2"
+    }
+
     stages {
 
         stage('Checkout Code') {
@@ -11,13 +15,13 @@ pipeline {
 
         stage('Build Docker Image') {
             steps {
-                bat 'docker build -t 2024ht66055/appv2:v2 .'
+                bat "docker build -t %IMAGE_NAME% ."
             }
         }
 
         stage('Run Unit Tests') {
             steps {
-                bat 'docker run --rm 2024ht66055/appv2:v2 pytest'
+                bat "docker run --rm %IMAGE_NAME% pytest"
             }
         }
 
@@ -29,7 +33,7 @@ pipeline {
                         docker run --rm ^
                         -e SONAR_HOST_URL=http://host.docker.internal:9000 ^
                         -e SONAR_LOGIN=%SONAR_TOKEN% ^
-                        -v %cd%:/usr/src ^
+                        -v "%WORKSPACE%":/usr/src ^
                         sonarsource/sonar-scanner-cli ^
                         -Dsonar.projectKey=gym-app ^
                         -Dsonar.sources=.
@@ -46,10 +50,10 @@ pipeline {
                     usernameVariable: 'USER',
                     passwordVariable: 'PASS'
                 )]) {
-                    bat '''
-                    echo %PASS% | docker login -u %USER% --password-stdin
-                    docker push 2024ht66055/appv2:v2
-                    '''
+                    bat """
+                    docker login -u %USER% -p %PASS%
+                    docker push %IMAGE_NAME%
+                    """
                 }
             }
         }
