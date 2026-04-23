@@ -26,22 +26,22 @@ pipeline {
         }
 
         stage('SonarQube Analysis') {
-            steps {
-                withSonarQubeEnv('SonarQube') {
-                    withCredentials([string(credentialsId: 'sonar-token', variable: 'SONAR_TOKEN')]) {
-                        bat """
-                        docker run --rm ^
-                        -e SONAR_HOST_URL=http://host.docker.internal:9000 ^
-                        -e SONAR_LOGIN=%SONAR_TOKEN% ^
-                        -v "%WORKSPACE%":/usr/src ^
-                        sonarsource/sonar-scanner-cli ^
-                        -Dsonar.projectKey=gym-app ^
-                        -Dsonar.sources=.
-                        """
-                    }
-                }
+    steps {
+        withSonarQubeEnv('SonarQube') {
+            withCredentials([string(credentialsId: 'sonar-token', variable: 'SONAR_TOKEN')]) {
+                bat """
+                docker run --rm ^
+                -e SONAR_HOST_URL=http://host.docker.internal:9000 ^
+                -e SONAR_TOKEN=%SONAR_TOKEN% ^
+                -v "%WORKSPACE%":/usr/src ^
+                sonarsource/sonar-scanner-cli ^
+                -Dsonar.projectKey=gym-app ^
+                -Dsonar.sources=.
+                """
             }
         }
+    }
+}
 
         stage('Push Image to Docker Hub') {
             steps {
