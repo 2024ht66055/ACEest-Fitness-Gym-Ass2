@@ -18,6 +18,8 @@ A complete **Flask-based Gym Management System** developed as part of a **DevOps
 * Version control using Git & GitHub
 * Automated testing using Pytest
 * Containerization using Docker
+* Code Quality using SonarQube
+* Deployment and Orchestration using Kubernetes 
 * CI/CD pipelines using Jenkins and GitHub Actions
 
 ACEest Fitness & Gym is a lightweight web application designed to manage:
