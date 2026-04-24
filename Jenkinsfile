@@ -20,18 +20,17 @@ pipeline {
             }
         }
 
-        stage('Run Unit Tests') {
-            steps {
-                sh """
-                    docker run --rm \
-                    -v \$(pwd):/app \
-                    -w /app \
-                    ${DOCKER_IMAGE} \
-                    pytest --cov=appv1 --cov=appv2 --cov=appv3 --cov-report=xml
-                """
-            }
-        }
-
+       stage('Run Unit Tests') {
+    steps {
+        sh """
+            docker run --rm \
+            -v ${WORKSPACE}:/app \
+            -w /app \
+            ${DOCKER_IMAGE} \
+            pytest --cov=appv1 --cov=appv2 --cov=appv3 --cov-report=xml
+        """
+    }
+}
         stage('SonarQube Analysis') {
             steps {
                 withSonarQubeEnv('SonarQube') {
