@@ -130,8 +130,8 @@ Overall, the project demonstrates how DevOps practices enhance automation, code 
 ### 1️⃣ Clone the repository
 
 ```bash
-git clone https://github.com/2024ht66055/ACEest-Fitness-Gym.git
-cd ACEest-Fitness-Gym
+git clone https://github.com/2024ht66055/ACEest-Fitness-Gym-Ass2.git
+cd ACEest-Fitness-Gym-Ass2
 ```
 
 ### 2️⃣ Install dependencies
