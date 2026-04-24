@@ -176,19 +176,19 @@ Tests include:
 ### Build Docker Image
 
 ```bash
-docker build -t ACEest-Fitness-Gym .
+docker build -t ACEest-Fitness-Gym-Ass2 .
 ```
 
 ### Run Container
 
 ```bash
-docker run -p 5000:5000 ACEest-Fitness-Gym
+docker run -p 5000:5000 ACEest-Fitness-Gym-Ass2
 ```
 
 ### Run Tests Inside Docker
 
 ```bash
-docker run --rm ACEest-Fitness-Gym pytest
+docker run --rm ACEest-Fitness-Gym-Ass2 pytest
 ```
 
 ---
