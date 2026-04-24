@@ -4,6 +4,7 @@ pipeline {
     environment {
         DOCKER_IMAGE = "2024ht66055/appv2:v2"
         SONAR_HOST_URL = "http://172.31.91.135:9000"
+        SONAR_USER_HOME = "${WORKSPACE}/.sonar"
     }
 
     stages {
@@ -20,36 +21,38 @@ pipeline {
             }
         }
 
-   stage('Run Unit Tests') {
-    steps {
-        sh """
-            docker run --rm \
-            -v "${WORKSPACE}:/app" \
-            -w /app \
-            ${DOCKER_IMAGE} \
-            pytest --cov=appv1 --cov=appv2 --cov=appv3 --cov-report=xml
-        """
-    }
-}
-    stage('SonarQube Analysis') {
-    steps {
-        withSonarQubeEnv('SonarQube') {
-            withCredentials([string(credentialsId: 'sonar-token', variable: 'SONAR_TOKEN')]) {
-
+        stage('Run Unit Tests') {
+            steps {
                 sh """
                     docker run --rm \
-                    -e SONAR_HOST_URL=${SONAR_HOST_URL} \
-                    -e SONAR_TOKEN=\$SONAR_TOKEN \
                     -v "${WORKSPACE}:/app" \
-                    sonarsource/sonar-scanner-cli \
-                    -Dsonar.projectKey=gym-app \
-                    -Dsonar.sources=. \
-                    -Dsonar.python.coverage.reportPaths=/app/coverage.xml
+                    -w /app \
+                    ${DOCKER_IMAGE} \
+                    pytest --cov=appv1 --cov=appv2 --cov=appv3 --cov-report=xml
                 """
             }
         }
-    }
-}
+
+        stage('SonarQube Analysis') {
+            steps {
+                withSonarQubeEnv('SonarQube') {
+                    withCredentials([string(credentialsId: 'sonar-token', variable: 'SONAR_TOKEN')]) {
+
+                        sh """
+                            docker run --rm \
+                            -e SONAR_HOST_URL=${SONAR_HOST_URL} \
+                            -e SONAR_TOKEN=\$SONAR_TOKEN \
+                            -v "${WORKSPACE}:/app" \
+                            sonarsource/sonar-scanner-cli \
+                            -Dsonar.projectKey=gym-app \
+                            -Dsonar.sources=. \
+                            -Dsonar.python.coverage.reportPaths=/app/coverage.xml \
+                            -Dsonar.working.directory=/tmp
+                        """
+                    }
+                }
+            }
+        }
 
         stage('Push Image to Docker Hub') {
             steps {
