@@ -81,7 +81,7 @@ Overall, the project demonstrates how DevOps practices enhance automation, code 
 ---
 
 ## 📁 Project Structure
-
+```
 aceest-fitness-gym/
 │
 ├── app.py                  # Main Flask application
