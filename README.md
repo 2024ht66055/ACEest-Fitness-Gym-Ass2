@@ -12,23 +12,13 @@
 
 ## 🚀 Project Overview
 
-A complete **Flask-based Gym Management System** developed as part of a **DevOps assignment**, demonstrating modern software engineering practices including:
+This project implements a complete DevOps CI/CD pipeline for the ACEest Fitness & Gym Management System, a Flask-based application for managing gym clients and workouts.
 
-* Web application development using Flask
-* Version control using Git & GitHub
-* Automated testing using Pytest
-* Containerization using Docker
-* Code Quality using SonarQube
-* Deployment and Orchestration using Kubernetes 
-* CI/CD pipelines using Jenkins and GitHub Actions
+The application is developed in multiple versions and automated using GitHub (version control), Jenkins (CI), Pytest (testing), SonarQube (code quality), Docker (containerization), and Kubernetes (deployment).
 
-ACEest Fitness & Gym is a lightweight web application designed to manage:
+The pipeline ensures continuous integration, automated testing, and reliable deployment through containerized environments. Advanced deployment strategies such as Rolling Updates, Blue-Green Deployment, Canary Release, and Rollback mechanisms are used to achieve zero-downtime and safe releases.
 
-* Client records
-* Workout tracking
-* Fitness program generation
-
-The project showcases how an application evolves from **local development to a fully automated CI/CD pipeline**.
+Overall, the project demonstrates how DevOps practices enhance automation, code quality, scalability, and deployment reliability in a real-world scenario.
 
 ---
 
