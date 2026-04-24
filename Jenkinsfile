@@ -2,8 +2,9 @@ pipeline {
     agent any
 
     environment {
-        IMAGE_NAME = "2024ht66055/appv2"
-        IMAGE_TAG  = "v2"
+        DOCKER_IMAGE = "2024ht66055/appv2:v2"
+        SONAR_HOST_URL = "http://172.31.91.135:9000"
+        SONAR_PROJECT_KEY = "gym-app"
     }
 
     stages {
@@ -16,18 +17,18 @@ pipeline {
 
         stage('Build Docker Image') {
             steps {
-                sh "docker build -t ${IMAGE_NAME}:${IMAGE_TAG} ."
+                sh "docker build -t ${DOCKER_IMAGE} ."
             }
         }
 
         stage('Run Unit Tests') {
             steps {
                 sh """
-                docker run --rm \
-                -v "\$WORKSPACE:/app" \
-                -w /app \
-                ${IMAGE_NAME}:${IMAGE_TAG} \
-                pytest --cov=appv1 --cov=appv2 --cov=appv3 --cov-report=xml
+                    docker run --rm \
+                    -v "${WORKSPACE}:/app" \
+                    -w /app \
+                    ${DOCKER_IMAGE} \
+                    pytest --cov=. --cov-report=xml
                 """
             }
         }
@@ -36,15 +37,17 @@ pipeline {
             steps {
                 withSonarQubeEnv('SonarQube') {
                     withCredentials([string(credentialsId: 'sonar-token', variable: 'SONAR_TOKEN')]) {
+
                         sh """
-                        docker run --rm \
-                        -e SONAR_HOST_URL=http://host.docker.internal:9000 \
-                        -e SONAR_TOKEN=${SONAR_TOKEN} \
-                        -v "\$WORKSPACE:/usr/src" \
-                        sonarsource/sonar-scanner-cli \
-                        -Dsonar.projectKey=gym-app \
-                        -Dsonar.sources=. \
-                        -Dsonar.python.coverage.reportPaths=coverage.xml
+                            docker run --rm \
+                            -e SONAR_HOST_URL=${SONAR_HOST_URL} \
+                            -e SONAR_TOKEN=\$SONAR_TOKEN \
+                            -v "${WORKSPACE}:/usr/src" \
+                            sonarsource/sonar-scanner-cli \
+                            -Dsonar.projectKey=${SONAR_PROJECT_KEY} \
+                            -Dsonar.sources=/usr/src \
+                            -Dsonar.python.coverage.reportPaths=/usr/src/coverage.xml \
+                            -Dsonar.working.directory=/tmp/sonar
                         """
                     }
                 }
@@ -55,30 +58,25 @@ pipeline {
             steps {
                 withCredentials([usernamePassword(
                     credentialsId: 'dockerhub-creds',
-                    usernameVariable: 'USER',
-                    passwordVariable: 'PASS'
+                    usernameVariable: 'DOCKER_USER',
+                    passwordVariable: 'DOCKER_PASS'
                 )]) {
+
                     sh """
-                    echo $PASS | docker login -u $USER --password-stdin
-                    docker push ${IMAGE_NAME}:${IMAGE_TAG}
+                        echo \$DOCKER_PASS | docker login -u \$DOCKER_USER --password-stdin
+                        docker push ${DOCKER_IMAGE}
                     """
                 }
-            }
-        }
-
-        stage('Archive Artifacts') {
-            steps {
-                archiveArtifacts artifacts: '**/*', fingerprint: true
             }
         }
     }
 
     post {
         success {
-            echo 'Pipeline completed successfully!'
+            echo "Pipeline SUCCESS"
         }
         failure {
-            echo 'Pipeline failed. Check logs.'
+            echo "Pipeline FAILED - check logs"
         }
     }
 }
