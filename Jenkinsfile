@@ -24,7 +24,7 @@ pipeline {
             steps {
                 sh """
                 docker run --rm \
-                -v \$WORKSPACE:/app \
+                -v "\$WORKSPACE:/app" \
                 -w /app \
                 ${IMAGE_NAME}:${IMAGE_TAG} \
                 pytest --cov=appv1 --cov=appv2 --cov=appv3 --cov-report=xml
@@ -40,7 +40,7 @@ pipeline {
                         docker run --rm \
                         -e SONAR_HOST_URL=http://host.docker.internal:9000 \
                         -e SONAR_TOKEN=${SONAR_TOKEN} \
-                        -v \$WORKSPACE:/usr/src \
+                        -v "\$WORKSPACE:/usr/src" \
                         sonarsource/sonar-scanner-cli \
                         -Dsonar.projectKey=gym-app \
                         -Dsonar.sources=. \
