@@ -20,11 +20,11 @@ pipeline {
             }
         }
 
-       stage('Run Unit Tests') {
+      stage('Run Unit Tests') {
     steps {
         sh """
             docker run --rm \
-            -v ${WORKSPACE}:/app \
+            -v "${WORKSPACE}:/app" \
             -w /app \
             ${DOCKER_IMAGE} \
             pytest --cov=appv1 --cov=appv2 --cov=appv3 --cov-report=xml
