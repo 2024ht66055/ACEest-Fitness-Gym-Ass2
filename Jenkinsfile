@@ -28,7 +28,7 @@ pipeline {
                     -v "${WORKSPACE}:/app" \
                     -w /app \
                     ${DOCKER_IMAGE} \
-                    pytest --cov=app --cov-report=xml
+                    pytest --cov=. --cov-report=xml
                 """
             }
         }
