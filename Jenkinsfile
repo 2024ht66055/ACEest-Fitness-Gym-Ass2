@@ -32,25 +32,24 @@ pipeline {
             }
         }
 
-      stage('SonarQube Analysis') {
+    stage('SonarQube Analysis') {
     steps {
         withSonarQubeEnv('SonarQube') {
             withCredentials([string(credentialsId: 'sonar-token', variable: 'SONAR_TOKEN')]) {
-                sh '''
+                sh """
                 docker run --rm \
-                -e SONAR_HOST_URL=http://172.31.91.135:9000
+                -e SONAR_HOST_URL=http://172.31.91.135:9000 \
                 -e SONAR_TOKEN=$SONAR_TOKEN \
-                -v "$WORKSPACE:/usr/src" \
+                -v "\$WORKSPACE:/usr/src" \
                 sonarsource/sonar-scanner-cli \
                 -Dsonar.projectKey=gym-app \
                 -Dsonar.sources=. \
                 -Dsonar.python.coverage.reportPaths=coverage.xml
-                '''
+                """
             }
         }
     }
 }
-
         stage('Push Image to Docker Hub') {
             steps {
                 withCredentials([usernamePassword(
