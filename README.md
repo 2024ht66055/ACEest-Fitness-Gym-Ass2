@@ -54,6 +54,14 @@ Overall, the project demonstrates how DevOps practices enhance automation, code 
 * SQLite database (`aceest_fitness.db`)
 * Automatically initialized
 
+### ⚙️ DevOps & Deployment Features
+* Version control using Git & GitHub
+* CI pipeline using Jenkins
+* Automated testing with Pytest
+* Code quality analysis using SonarQube
+* Docker-based containerization
+* Image versioning using Docker Hub
+* Kubernetes-based deployment
 ---
 
 ## 🛠 Tech Stack
