@@ -54,7 +54,7 @@ Overall, the project demonstrates how DevOps practices enhance automation, code 
 * SQLite database (`aceest_fitness.db`)
 * Automatically initialized
 
-### ⚙️ DevOps & Deployment Features
+### ⚙️ DevOps & Deployment
 * Version control using Git & GitHub
 * CI pipeline using Jenkins
 * Automated testing with Pytest
