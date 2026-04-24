@@ -66,6 +66,9 @@ Overall, the project demonstrates how DevOps practices enhance automation, code 
 | Containerization | Docker                   |
 | CI/CD            | Jenkins + GitHub Actions |
 | Version Control  | Git & GitHub             |
+| Code Quality     | SoanrQube                |
+| Container Regis  | Docker Hub               |
+| Orchestr&Deploy  | Kubernetes               |
 
 ---
 
