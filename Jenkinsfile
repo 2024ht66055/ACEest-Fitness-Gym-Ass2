@@ -20,7 +20,7 @@ pipeline {
             }
         }
 
-      stage('Run Unit Tests') {
+   stage('Run Unit Tests') {
     steps {
         sh """
             docker run --rm \
@@ -31,7 +31,7 @@ pipeline {
         """
     }
 }
-       stage('SonarQube Analysis') {
+    stage('SonarQube Analysis') {
     steps {
         withSonarQubeEnv('SonarQube') {
             withCredentials([string(credentialsId: 'sonar-token', variable: 'SONAR_TOKEN')]) {
@@ -40,11 +40,11 @@ pipeline {
                     docker run --rm \
                     -e SONAR_HOST_URL=${SONAR_HOST_URL} \
                     -e SONAR_TOKEN=\$SONAR_TOKEN \
-                    -v "${WORKSPACE}:/usr/src" \
+                    -v "${WORKSPACE}:/app" \
                     sonarsource/sonar-scanner-cli \
                     -Dsonar.projectKey=gym-app \
                     -Dsonar.sources=. \
-                    -Dsonar.python.coverage.reportPaths=coverage.xml
+                    -Dsonar.python.coverage.reportPaths=/app/coverage.xml
                 """
             }
         }
