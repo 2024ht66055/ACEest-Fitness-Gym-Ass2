@@ -87,34 +87,34 @@ Overall, the project demonstrates how DevOps practices enhance automation, code 
 ├── appv1.py                 # Version 1 of Flask application
 ├── appv2.py                 # Stable version (used in deployments)
 ├── appv3.py                 # Updated version (used for canary/green)
-│
+
 ├── aceest_fitness.db        # SQLite database
 ├── requirements.txt         # Python dependencies
 ├── README.md                # Project documentation
 ├── .gitignore               # Ignored files
-│
+
 ├── Dockerfile               # Main Docker configuration
 ├── dockerfileblue           # Dockerfile for Blue version
 ├── dockerfilegreen          # Dockerfile for Green version
-│
+
 ├── Jenkinsfile              # Jenkins CI/CD pipeline
-│
+
 ├── deployment.yaml          # Base Kubernetes deployment
 ├── service.yaml             # Kubernetes service (NodePort)
-│
+
 ├── blue-deployment.yaml     # Blue environment deployment
 ├── blueservice.yaml         # Blue service configuration
-│
+
 ├── green-deployment.yaml    # Green environment deployment
 ├── greenservice.yaml        # Green service configuration
-│
+
 ├── myapp/                   # Additional deployment configs
 │   ├── canary.yaml          # Canary deployment
 │   ├── stable.yaml          # Stable deployment
 │   ├── service.yaml         # Shared service
 │   ├── shadow.yaml          # Shadow deployment
 │   ├── shservice.yaml       # Shadow service
-│
+
 ├── tests/                   # Test cases
 │   └── test_app.py          # Pytest tests
 │
