@@ -176,21 +176,28 @@ Tests include:
 ### Build Docker Image
 
 ```bash
-docker build -t ACEest-Fitness-Gym-Ass2 .
+docker build -t 2024ht66055/appv2:v2 .
+docker build -t 2024ht66055/appv2:v3 .
 ```
 
 ### Run Container
 
 ```bash
-docker run -p 5000:5000 ACEest-Fitness-Gym-Ass2
+docker run -p 5000:5000 2024ht66055/appv2:v2
+docker run -p 5000:5000 2024ht66055/appv2:v3
 ```
 
 ### Run Tests Inside Docker
 
 ```bash
-docker run --rm ACEest-Fitness-Gym-Ass2 pytest
+docker run --rm 2024ht66055/appv2:v2 pytest
+docker run --rm 2024ht66055/appv2:v3 pytest
 ```
-
+### Docker Hub push
+```bash
+docker push 2024ht66055/appv2:v2
+docker push 2024ht66055/appv2:v3
+```
 ---
 
 ## ⚙️ Jenkins Pipeline
