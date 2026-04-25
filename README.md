@@ -153,7 +153,7 @@ http://127.0.0.1:5000/
 ```
 
 ---
-## <img width="512" height="512" alt="history" src="https://github.com/user-attachments/assets/dd0f397e-00db-4260-a691-ad2d18a00a8f" />
+## <img width="204" height="204" alt="history" src="https://github.com/user-attachments/assets/09d9683e-703e-44a7-bff2-4f008c443e0f" />
  Version Control
 
 Multiple versions (v1, v2, v3) are managed using commits and tags
