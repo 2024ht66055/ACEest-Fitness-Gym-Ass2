@@ -143,7 +143,7 @@ pip install -r requirements.txt
 ### 3️⃣ Run the application
 
 ```bash
-python app.py
+python appv1.py
 ```
 
 ### 4️⃣ Open in browser
@@ -153,7 +153,9 @@ http://127.0.0.1:5000/
 ```
 
 ---
-
+## Version Control
+Multiple versions (v1, v2, v3) are managed using commits and tags
+---
 ## 🧪 Running Tests (Pytest)
 
 Run all tests using:
@@ -220,15 +222,15 @@ The Jenkins pipeline automates the build process.
   
  4. **Code Quality Analysis (SonarQube)**
 
-      * Performs static code analysis
+   * Performs static code analysis
 
-  5. **Docker Image Push**
+ 5. **Docker Image Push**
 
-      * Authenticates using Jenkins credentials
+   * Authenticates using Jenkins credentials
 
-   6. **Deployment to Kubernetes**
+ 6. **Deployment to Kubernetes**
 
-      * Deploys application using Kubernetes manifests
+   * Deploys application using Kubernetes manifests
 
 
 ### Outcome:
