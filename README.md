@@ -154,8 +154,9 @@ http://127.0.0.1:5000/
 
 ---
 ## Version Control
+
 Multiple versions (v1, v2, v3) are managed using commits and tags
----
+
 ## 🧪 Running Tests (Pytest)
 
 Run all tests using:
