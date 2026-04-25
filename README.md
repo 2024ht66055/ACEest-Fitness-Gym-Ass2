@@ -267,7 +267,8 @@ GitHub Actions automates testing on every code change.
 * Prevents broken code from entering main branch
 
 ---
-## <img width="40" height="40" alt="icons8-kubernetes-48" src="https://github.com/user-attachments/assets/a87b453b-0ab4-40e9-a15b-eb8f0d4cb8da" /> Kubernetes
+
+## <img width="30" height="30" alt="icons8-kubernetes-48" src="https://github.com/user-attachments/assets/a87b453b-0ab4-40e9-a15b-eb8f0d4cb8da" /> Kubernetes
 
 * The application is deployed using Kubernetes
 
