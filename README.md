@@ -268,7 +268,7 @@ GitHub Actions automates testing on every code change.
 
 ---
 
-##<img width="30" height="30" alt="icons8-kubernetes-48" src="https://github.com/user-attachments/assets/a87b453b-0ab4-40e9-a15b-eb8f0d4cb8da" /> Kubernetes
+## <img width="30" height="30" alt="icons8-kubernetes-48" src="https://github.com/user-attachments/assets/a87b453b-0ab4-40e9-a15b-eb8f0d4cb8da" /> Kubernetes
 
 * The application is deployed using Kubernetes
 
@@ -282,7 +282,7 @@ GitHub Actions automates testing on every code change.
 * A/B Testing
 
 ---
-##<img width="30" height="30" alt="icons8-testing-30" src="https://github.com/user-attachments/assets/1d3c26aa-c565-4414-a73e-13e5f29bd744" /> Automated Testing & Quality Assurance
+## <img width="30" height="30" alt="icons8-testing-30" src="https://github.com/user-attachments/assets/1d3c26aa-c565-4414-a73e-13e5f29bd744" /> Automated Testing & Quality Assurance
 
 * Unit tests implemented using Pytest
 * Tests executed:During GitHub Actions&Inside Docker container
