@@ -214,7 +214,11 @@ The Jenkins pipeline automates the build process.
 
    * Creates containerized environment
 
-3. **Run Tests**
+3. **Jenkins Credentials for Docker & SonarQube**
+
+      * Creates access token for Docker & SonarQube
+
+5. **Run Tests**
 
    * Executes Pytest inside Docker
 
