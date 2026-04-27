@@ -339,24 +339,32 @@ Below Windows shows different activities done to complete the assignment.
 
 <img width="1891" height="658" alt="image" src="https://github.com/user-attachments/assets/2b4c2f05-9852-4b0a-afd9-bcdaa87a3e33" />
 
-<img width="1645" height="670" alt="image" src="https://github.com/user-attachments/assets/d8833402-316c-43fd-ab7f-2b4999a86711" /> Docker Token Access
+## Docker Token Access
+<img width="1320" height="486" alt="image" src="https://github.com/user-attachments/assets/11e8f73f-1b88-454f-aa14-fe3d97143f51" />
 
-<img width="1749" height="638" alt="image" src="https://github.com/user-attachments/assets/a5f0eb89-4a6e-4015-aada-a7baa7696330" /> Automate Build after every update(2 secs)
+## Automate Build after every update(2 secs)
+<img width="1749" height="638" alt="image" src="https://github.com/user-attachments/assets/a5f0eb89-4a6e-4015-aada-a7baa7696330" />
 
-<img width="846" height="729" alt="image" src="https://github.com/user-attachments/assets/d9103a1e-1111-43dd-9049-a2057623c92d" /> Build success
+## Build Artifacts
+<img width="792" height="590" alt="image" src="https://github.com/user-attachments/assets/d03a391c-5f83-4436-896c-e0d3969d1d9e" />
 
-<img width="841" height="739" alt="image" src="https://github.com/user-attachments/assets/07c5b599-bec8-4220-84d9-4a1a67d09e37" /> Console Output
+
+## Build success
+<img width="846" height="729" alt="image" src="https://github.com/user-attachments/assets/d9103a1e-1111-43dd-9049-a2057623c92d" />
+
+## Console Output
+<img width="841" height="739" alt="image" src="https://github.com/user-attachments/assets/07c5b599-bec8-4220-84d9-4a1a67d09e37" />
 
 <img width="839" height="481" alt="image" src="https://github.com/user-attachments/assets/cf64a86d-eb9f-4208-afd8-f6be735f171d" />
 
 <img width="858" height="750" alt="image" src="https://github.com/user-attachments/assets/8c1fa8de-b969-4b61-95b3-c9d77f681e41" />
 
-<img width="1621" height="751" alt="image" src="https://github.com/user-attachments/assets/d55f970d-571b-4d30-b6b8-5a199cc06ca1" /> Pipeline Steps
+## Pipeline Steps
+<img width="1621" height="751" alt="image" src="https://github.com/user-attachments/assets/d55f970d-571b-4d30-b6b8-5a199cc06ca1" />
 
-<img width="1726" height="670" alt="image" src="https://github.com/user-attachments/assets/17e416de-4bdb-40a1-88cb-94bf52420a52" /> SonarQube Token Access
+## SonarQube Token Access
+<img width="1726" height="670" alt="image" src="https://github.com/user-attachments/assets/17e416de-4bdb-40a1-88cb-94bf52420a52" />
 
-
-<img width="1172" height="508" alt="image" src="https://github.com/user-attachments/assets/168b3258-0a57-4724-94b1-cbe7e7b3ad55" />
 
 <img width="1011" height="292" alt="image" src="https://github.com/user-attachments/assets/89634ad1-5c20-43c6-86e6-9145fe71a41d" />
 
