@@ -372,9 +372,11 @@ Below Windows shows different activities done to complete the assignment.
 
 ## <img width="48" height="48" alt="icons8-git-48" src="https://github.com/user-attachments/assets/ed9baf75-2723-45a3-af7f-195e42edc098" /> Github Actions
 
-<img width="987" height="456" alt="image" src="https://github.com/user-attachments/assets/4b18ef2b-c38e-40b6-b403-54209942eb9c" />
+<img width="1336" height="555" alt="image" src="https://github.com/user-attachments/assets/707b8589-751e-443b-8d0f-1b8b9f7954da" />
 
-<img width="1016" height="515" alt="image" src="https://github.com/user-attachments/assets/a96f6bb9-9a1a-4dbc-a652-c4ff4b6843f9" />
+
+<img width="1354" height="588" alt="image" src="https://github.com/user-attachments/assets/37dfd25a-53e4-4e2b-8515-c79beb0ee9ea" />
+
 
 
 
