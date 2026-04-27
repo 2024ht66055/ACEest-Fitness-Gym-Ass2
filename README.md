@@ -125,7 +125,7 @@ Overall, the project demonstrates how DevOps practices enhance automation, code 
 
 ---
 
-## ⚙️ Local Setup & Execution
+## ⚙️ Setup & Execution
 
 ### 1️⃣ Clone the repository
 
@@ -303,18 +303,21 @@ Below Windows shows different activities done to complete the assignment.
 
 <img width="479" height="493" alt="image" src="https://github.com/user-attachments/assets/c77401eb-340c-439a-8ef2-d0d584746c54" />
 
-## <img width="32" height="32" alt="pytest-original-32px" src="https://github.com/user-attachments/assets/8a56976d-cbf6-43a2-a964-378ac692ffa4" /> PYTEST
-<img width="1003" height="370" alt="image" src="https://github.com/user-attachments/assets/8b9cbc79-1bef-4141-bef5-c8d85461f5a8" />
+## <img width="32" height="32" alt="pytest-original-32px" src="https://github.com/user-attachments/assets/8a56976d-cbf6-43a2-a964-378ac692ffa4" /> PYTEST Different Version Files
+<img width="829" height="569" alt="image" src="https://github.com/user-attachments/assets/fbd4a29e-d303-41d4-b6f9-5a89c6911b53" />
+
 
 ## <img width="48" height="48" alt="icons8-docker-48" src="https://github.com/user-attachments/assets/07964fed-5d45-4bdc-9143-77485723ce33" /> DOCKER TEST
 
 ![1](https://github.com/user-attachments/assets/03dd006a-71e2-471b-8770-24b18c4a2bde)
 
-![2](https://github.com/user-attachments/assets/cc0dca67-fcdc-4b90-aa8b-d2ceec2357b5)
+<img width="1356" height="593" alt="image" src="https://github.com/user-attachments/assets/230f327f-be4d-4df6-a0c7-93221433dc2e" />
 
-![3](https://github.com/user-attachments/assets/72f35d2c-f677-44eb-82a0-e94faf23dff3)
+<img width="1342" height="586" alt="image" src="https://github.com/user-attachments/assets/2e55eb18-e6ac-41d5-a254-21f361c52070" />
 
-![4](https://github.com/user-attachments/assets/069781dc-75ae-4237-9a15-fd56ecbd9291)
+<img width="1320" height="580" alt="image" src="https://github.com/user-attachments/assets/3189a603-8a57-43b2-97f0-6cdb1ee5efa8" />
+
+
 
 
 
