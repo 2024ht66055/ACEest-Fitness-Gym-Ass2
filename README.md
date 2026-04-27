@@ -383,13 +383,18 @@ Below Windows shows different activities done to complete the assignment.
 ## Rollback Blue-Green Deployment
 
 ## Green version
+
 <img width="855" height="429" alt="image" src="https://github.com/user-attachments/assets/13ba083e-4434-47ff-a1af-c5e229a3f5a8" />
+
 ## Stimulate Failure
 <img width="720" height="298" alt="image" src="https://github.com/user-attachments/assets/60a30a62-436b-4efb-b268-bfc2ac370543" />
+
 ## Green Website not loading
 <img width="1306" height="540" alt="image" src="https://github.com/user-attachments/assets/26112bb0-8db2-4e80-a2c4-951b9080eec9" />
+
 ## Rollback to Blue
 <img width="647" height="122" alt="image" src="https://github.com/user-attachments/assets/25b372b4-dc31-492c-b436-5abd73335502" />
+
 ## Blue Website loading
 <img width="838" height="373" alt="image" src="https://github.com/user-attachments/assets/7c3dc1f9-485f-4008-84a4-df27c35ed519" />
 
