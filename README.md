@@ -337,7 +337,7 @@ Below Windows shows different activities done to complete the assignment.
 ## Docker Token Access
 <img width="1320" height="486" alt="image" src="https://github.com/user-attachments/assets/11e8f73f-1b88-454f-aa14-fe3d97143f51" />
 
-## Automate Build after every update(2 secs)
+## Automate Build after every update(2 mins)
 <img width="1749" height="638" alt="image" src="https://github.com/user-attachments/assets/a5f0eb89-4a6e-4015-aada-a7baa7696330" />
 
 ## Build Artifacts
