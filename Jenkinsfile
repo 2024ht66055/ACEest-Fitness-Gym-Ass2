@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         DOCKER_IMAGE = "2024ht66055/appv2:v2"
-        SONAR_HOST_URL = "http://172.31.117.68:9000"
+        SONAR_HOST_URL = "http://localhost:9000"
         SONAR_PROJECT_KEY = "gym-app"
     }
 
@@ -41,7 +41,7 @@ pipeline {
                         sh """
                             docker run --rm \
                              --network=host \
-                            -e SONAR_HOST_URL=${SONAR_HOST_URL} \
+                            -e SONAR_HOST_URL=http://localhost:9000 \
                             -e SONAR_TOKEN=\$SONAR_TOKEN \
                             -v "${WORKSPACE}:/usr/src" \
                             sonarsource/sonar-scanner-cli \
