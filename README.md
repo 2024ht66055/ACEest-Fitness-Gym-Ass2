@@ -13,11 +13,8 @@
 ## 🚀 Project Overview
 
 This project implements a complete DevOps CI/CD pipeline for the ACEest Fitness & Gym Management System, a Flask-based application for managing gym clients and workouts.
-
 The application is developed in multiple versions and automated using GitHub (version control), Jenkins (CI), Pytest (testing), SonarQube (code quality), Docker (containerization), and Kubernetes (deployment).
-
 The pipeline ensures continuous integration, automated testing, and reliable deployment through containerized environments. Advanced deployment strategies such as Rolling Updates, Blue-Green Deployment, Canary Release, and Rollback mechanisms are used to achieve zero-downtime and safe releases.
-
 Overall, the project demonstrates how DevOps practices enhance automation, code quality, scalability, and deployment reliability in a real-world scenario.
 
 ---
@@ -76,7 +73,7 @@ Overall, the project demonstrates how DevOps practices enhance automation, code 
 | Version Control  | Git & GitHub             |
 | Code Quality     | SoanrQube                |
 | Container Regis  | Docker Hub               |
-| Orchestr&Deploy  | Kubernetes               |
+| Deployment       | Kubernetes               |
 
 ---
 
