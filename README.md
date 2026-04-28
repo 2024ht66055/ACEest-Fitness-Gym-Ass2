@@ -401,6 +401,14 @@ Below Windows shows different activities done to complete the assignment.
 
 ## <img width="60" height="60" alt="image" src="https://github.com/user-attachments/assets/98ca7d57-1163-40dc-9cfa-fc9e3f82822e" />Canary Release
 
+## Canary Release Deployment
+<img width="791" height="211" alt="image" src="https://github.com/user-attachments/assets/a388a811-22d7-4a4f-8a00-3ff364e8e545" />
+
+## Balance Traffic in Canary Release - V1(75%) & V2(25%)
+<img width="801" height="216" alt="image" src="https://github.com/user-attachments/assets/b913876c-eab7-4dd3-88aa-a9045f0f956c" />
+
+
+
  
 
 
