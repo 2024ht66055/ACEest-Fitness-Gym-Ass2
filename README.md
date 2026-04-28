@@ -477,11 +477,29 @@ Below Windows shows different activities done to complete the assignment.
 ## 🔁 DevOps Workflow Summary
 
 ```
-Developer Code → GitHub → GitHub Actions (Test + Build)
-                    ↓
-                 Jenkins (Build + Test in Docker)
-                    ↓
-               Verified Application
+Developer Code 
+   ↓
+GitHub Repository (Version Control)
+   ↓
+GitHub Actions (Optional CI: Lint + Initial Tests)
+   ↓
+Jenkins Pipeline (Automated CI/CD)
+   ├── Checkout Code
+   ├── Build Docker Image
+   ├── Run Pytest (Unit Testing)
+   ├── SonarQube Analysis (Code Quality + Quality Gate)
+   ├── Push Docker Image to Docker Hub (Versioned)
+   ↓
+Kubernetes Deployment (CD Phase)
+   ├── Blue-Green Deployment
+   ├── Canary Release
+   ├── Shadow Deployment
+   ├── A/B Testing
+   ├── Rolling Updates
+   ↓
+Rollback Mechanism (if failure occurs)
+   ↓
+Verified & Stable Application
 ```
 ---
 
