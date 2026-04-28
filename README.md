@@ -459,7 +459,7 @@ Below Windows shows different activities done to complete the assignment.
 ## Rollback to Version 1
 <img width="813" height="359" alt="image" src="https://github.com/user-attachments/assets/714c54c6-f698-456b-a439-232fcec2f78f" />
 
-## Automate Build & Test
+## Automate Build & Test Output from CLOUD VM
 
 ## Jenkins Pipeline Stages
 <img width="1598" height="646" alt="image" src="https://github.com/user-attachments/assets/121b8639-ef0e-44f2-9ed7-8a8560edf1f6" />
