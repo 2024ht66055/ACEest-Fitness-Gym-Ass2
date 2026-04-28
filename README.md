@@ -407,6 +407,24 @@ Below Windows shows different activities done to complete the assignment.
 ## Balance Traffic in Canary Release - V1(75%) & V2(25%)
 <img width="801" height="216" alt="image" src="https://github.com/user-attachments/assets/b913876c-eab7-4dd3-88aa-a9045f0f956c" />
 
+## 👻 Shadow Deployment
+
+## Create Shadow Yaml File
+<img width="980" height="546" alt="image" src="https://github.com/user-attachments/assets/ce10dd57-758e-4c24-9b80-f14ff7fad116" />
+
+## Create service.yaml
+<img width="1176" height="479" alt="image" src="https://github.com/user-attachments/assets/ebdce42a-5341-4b8c-920c-59ac244209bc" />
+
+## Shadow pods Running
+<img width="841" height="203" alt="image" src="https://github.com/user-attachments/assets/540b7bc8-3c71-4e69-a2c9-0d546e392248" />
+
+## Shadow Received traffic (GET REquests)
+<img width="840" height="434" alt="image" src="https://github.com/user-attachments/assets/889ae808-5086-4773-ad4b-446bc41148c7" />
+
+
+
+
+
 
 
  
