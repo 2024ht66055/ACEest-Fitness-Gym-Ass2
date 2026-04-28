@@ -443,6 +443,22 @@ Below Windows shows different activities done to complete the assignment.
 ## A/B Kubernetes Deploy
 <img width="1354" height="527" alt="image" src="https://github.com/user-attachments/assets/0d61079b-3018-41cc-81fa-52dd4f067992" />
 
+## 🔁 Rolling Update
+<img width="495" height="82" alt="image" src="https://github.com/user-attachments/assets/bf9668a8-1500-4206-a9ad-8100c6956047" />
+
+## Old pods terminating & New pods creating
+<img width="781" height="192" alt="image" src="https://github.com/user-attachments/assets/160f7626-7c14-4a15-a1de-3e1172a46816" />
+
+##  Version 2
+<img width="789" height="79" alt="image" src="https://github.com/user-attachments/assets/3096d8ac-8631-44b8-978d-9172b8941492" />
+
+## Rollback to Version 1
+<img width="813" height="359" alt="image" src="https://github.com/user-attachments/assets/714c54c6-f698-456b-a439-232fcec2f78f" />
+
+
+
+
+
 
 
 
