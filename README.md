@@ -421,6 +421,30 @@ Below Windows shows different activities done to complete the assignment.
 ## Shadow Received traffic (GET REquests)
 <img width="840" height="434" alt="image" src="https://github.com/user-attachments/assets/889ae808-5086-4773-ad4b-446bc41148c7" />
 
+## 👥 A/B Testing
+
+## A/B Deployments
+<img width="564" height="212" alt="image" src="https://github.com/user-attachments/assets/bea62f56-d72c-4a3e-9eaf-68cfbb7b0e1b" />
+
+## A/B Pods with labels
+<img width="824" height="106" alt="image" src="https://github.com/user-attachments/assets/b46a758f-dd86-42b9-b12b-8b185c7d71f4" />
+
+## A/B service
+<img width="611" height="114" alt="image" src="https://github.com/user-attachments/assets/a51b80d6-154a-49ba-a0e3-d6c9e8715bfa" />
+
+## A/B Endpoints
+<img width="613" height="74" alt="image" src="https://github.com/user-attachments/assets/7dac541c-0772-410a-9286-d9633bbda840" />
+
+## Two sepearte A/B deployments created
+<img width="826" height="79" alt="image" src="https://github.com/user-attachments/assets/cf1b5934-361f-4e35-8fa4-aeaf15826cac" />
+
+<img width="835" height="101" alt="image" src="https://github.com/user-attachments/assets/298df5cd-6346-46db-9910-51afbafbf697" />
+
+
+
+
+
+
 
 
 
