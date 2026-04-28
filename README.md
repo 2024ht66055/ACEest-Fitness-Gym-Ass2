@@ -330,7 +330,7 @@ Below Windows shows different activities done to complete the assignment.
 <img width="1128" height="515" alt="image" src="https://github.com/user-attachments/assets/7b2199db-0e0f-47f6-aeaa-b62034b7c756" />
 
 
-## <img width="50" height="50" alt="icons8-jenkins-50" src="https://github.com/user-attachments/assets/0efc2d42-f73a-41f4-a2ee-6da615ee7e54" /> JENKINS
+## <img width="50" height="50" alt="icons8-jenkins-50" src="https://github.com/user-attachments/assets/0efc2d42-f73a-41f4-a2ee-6da615ee7e54" /> JENKINS OUTPUT TAKEN FROM CLOUD VM
 
 <img width="1891" height="658" alt="image" src="https://github.com/user-attachments/assets/2b4c2f05-9852-4b0a-afd9-bcdaa87a3e33" />
 
