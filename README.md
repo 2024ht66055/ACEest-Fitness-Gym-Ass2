@@ -361,7 +361,8 @@ Below Windows shows different activities done to complete the assignment.
 <img width="1726" height="670" alt="image" src="https://github.com/user-attachments/assets/17e416de-4bdb-40a1-88cb-94bf52420a52" />
 
 
-<img width="1011" height="292" alt="image" src="https://github.com/user-attachments/assets/89634ad1-5c20-43c6-86e6-9145fe71a41d" />
+<img width="1329" height="308" alt="image" src="https://github.com/user-attachments/assets/7ebb2f22-0027-40a3-af5c-c3a9c6918358" />
+
 
 
 
