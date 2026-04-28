@@ -440,6 +440,10 @@ Below Windows shows different activities done to complete the assignment.
 
 <img width="835" height="101" alt="image" src="https://github.com/user-attachments/assets/298df5cd-6346-46db-9910-51afbafbf697" />
 
+## A/B Kubernetes Deploy
+<img width="1354" height="527" alt="image" src="https://github.com/user-attachments/assets/0d61079b-3018-41cc-81fa-52dd4f067992" />
+
+
 
 
 
