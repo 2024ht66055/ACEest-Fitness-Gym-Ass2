@@ -467,6 +467,7 @@ Below Windows shows different activities done to complete the assignment.
 <img width="738" height="473" alt="image" src="https://github.com/user-attachments/assets/5de349a6-b4fa-4ddb-ade1-640845d16a74" />
 
 ## SonarQube Output
+<img width="1749" height="928" alt="image" src="https://github.com/user-attachments/assets/406b499c-988d-4424-b08d-f336db53aa4c" />
 
 
 
