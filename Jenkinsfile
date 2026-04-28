@@ -40,7 +40,7 @@ pipeline {
 
                         sh """
                             docker run --rm \
-                           --network=host \
+                            --network=host \
                             -e SONAR_HOST_URL=http://localhost:9000 \
                             -e SONAR_TOKEN=\$SONAR_TOKEN \
                             -v "${WORKSPACE}:/usr/src" \
