@@ -476,32 +476,6 @@ Below Windows shows different activities done to complete the assignment.
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
-
-
-
-
-
-
-
-
 ## 🔁 DevOps Workflow Summary
 
 ```
@@ -539,6 +513,8 @@ Developer Code → GitHub → GitHub Actions (Test + Build)
 * Database file is excluded using `.gitignore`
 * Docker container uses an isolated environment
 * No production deployment included (development-focused project)
+* Kubernetes is used for orchestrating containerized deployments and managing application lifecycle
+* CI/CD integration is demonstrated using Jenkins, along with automated testing and code quality analysis.
 
 ---
 
