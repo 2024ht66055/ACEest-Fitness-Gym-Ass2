@@ -518,10 +518,18 @@ Developer Code → GitHub → GitHub Actions (Test + Build)
 
 * Version Control with Git
 * Continuous Integration (CI)
-* Automated Testing
-* Containerization (Docker)
+* Continuous Deployment (CD)
+* Automated Testing (Pytest)
+* Containerization using Docker
+* Container Orchestration using Kubernetes
+* Deployment Strategies (Blue-Green, Canary, Shadow, A/B Testing, Rolling Updates)
+* Rollback and Failure Recovery Mechanisms
 * Pipeline Automation (Jenkins & GitHub Actions)
-* Environment Consistency
+* Infrastructure as Code (YAML-based configuration)
+* Environment Consistency across deployments
+* Code Quality Analysis using SonarQube
+* Basic Monitoring and Logging
+
 
 ---
 
