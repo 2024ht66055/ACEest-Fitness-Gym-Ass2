@@ -446,6 +446,9 @@ Below Windows shows different activities done to complete the assignment.
 ## 🔁 Rolling Update
 <img width="495" height="82" alt="image" src="https://github.com/user-attachments/assets/bf9668a8-1500-4206-a9ad-8100c6956047" />
 
+## Rolling Kubernetes Deploy
+<img width="1277" height="459" alt="image" src="https://github.com/user-attachments/assets/3eab12c6-2392-4413-be96-64f37aa7f901" />
+
 ## Old pods terminating & New pods creating
 <img width="781" height="192" alt="image" src="https://github.com/user-attachments/assets/160f7626-7c14-4a15-a1de-3e1172a46816" />
 
