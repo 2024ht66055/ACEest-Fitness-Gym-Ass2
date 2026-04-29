@@ -466,7 +466,10 @@ Below Windows shows different activities done to complete the assignment.
 
 ## SonarQube Output
 <img width="1749" height="928" alt="image" src="https://github.com/user-attachments/assets/406b499c-988d-4424-b08d-f336db53aa4c" />
+<img width="1750" height="794" alt="image" src="https://github.com/user-attachments/assets/e93cb7f8-7c3b-4df3-958c-1c337826fd55" />
 <img width="1695" height="824" alt="image" src="https://github.com/user-attachments/assets/01266523-81fa-4f4c-bdea-bd2e48f7d7bf" />
+<img width="1647" height="782" alt="image" src="https://github.com/user-attachments/assets/eeb4e29c-5a5e-4e60-8885-0cdb96ad00ad" />
+
 
 
 ## SonarQube Docker Image
