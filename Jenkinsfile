@@ -24,11 +24,11 @@ pipeline {
         stage('Run Unit Tests') {
             steps {
                 sh """
-                    docker run --rm \
-                    -v "${WORKSPACE}:/app" \
-                    -w /app \
-                    ${DOCKER_IMAGE} \
-                    pytest --cov=appv1 --cov-report=xml
+                docker run --rm \
+                -v "${WORKSPACE}:/app" \
+                -w /app \
+                ${DOCKER_IMAGE} \
+                pytest --cov=appv1 --cov-report=xml
                 """
             }
         }
@@ -39,16 +39,17 @@ pipeline {
                     withCredentials([string(credentialsId: 'sonar-token', variable: 'SONAR_TOKEN')]) {
 
                         sh """
-                            docker run --rm 
-                            --network=host \
-                            -e SONAR_HOST_URL=http://localhost:9000 \
-                            -e SONAR_TOKEN=\$SONAR_TOKEN \
-                            -v "${WORKSPACE}:/usr/src" \
-                            sonarsource/sonar-scanner-cli \
-                            -Dsonar.projectKey=appv1 \
-                            -Dsonar.sources=/usr/src/appv1 \
-                            -Dsonar.python.coverage.reportPaths=/usr/src/coverage.xml \
-                            -Dsonar.working.directory=/tmp/sonar
+                        docker run --rm \
+                        --network=host \
+                        -e SONAR_HOST_URL=${SONAR_HOST_URL} \
+                        -e SONAR_TOKEN=\$SONAR_TOKEN \
+                        -v "${WORKSPACE}:/usr/src" \
+                        sonarsource/sonar-scanner-cli \
+                        -Dsonar.projectKey=${SONAR_PROJECT_KEY} \
+                        -Dsonar.projectName=appv1 \
+                        -Dsonar.sources=/usr/src \
+                        -Dsonar.python.coverage.reportPaths=/usr/src/coverage.xml \
+                        -Dsonar.working.directory=/tmp/sonar
                         """
                     }
                 }
@@ -64,8 +65,8 @@ pipeline {
                 )]) {
 
                     sh """
-                        echo \$DOCKER_PASS | docker login -u \$DOCKER_USER --password-stdin
-                        docker push ${DOCKER_IMAGE}
+                    echo \$DOCKER_PASS | docker login -u \$DOCKER_USER --password-stdin
+                    docker push ${DOCKER_IMAGE}
                     """
                 }
             }
