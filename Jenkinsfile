@@ -4,7 +4,7 @@ pipeline {
     environment {
         DOCKER_IMAGE = "2024ht66055/appv2:v2"
         SONAR_HOST_URL = "http://localhost:9000"
-        SONAR_PROJECT_KEY = "gym-app"
+        SONAR_PROJECT_KEY = "appv1"
     }
 
     stages {
@@ -28,7 +28,7 @@ pipeline {
                     -v "${WORKSPACE}:/app" \
                     -w /app \
                     ${DOCKER_IMAGE} \
-                    pytest --cov=. --cov-report=xml
+                    pytest --cov=appv1 --cov-report=xml
                 """
             }
         }
@@ -46,7 +46,7 @@ pipeline {
                             -v "${WORKSPACE}:/usr/src" \
                             sonarsource/sonar-scanner-cli \
                             -Dsonar.projectKey=${SONAR_PROJECT_KEY} \
-                            -Dsonar.sources=/usr/src \
+                            -Dsonar.sources=/usr/src/appv1 \
                             -Dsonar.python.coverage.reportPaths=/usr/src/coverage.xml \
                             -Dsonar.working.directory=/tmp/sonar
                         """
