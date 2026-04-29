@@ -45,7 +45,7 @@ pipeline {
                             -e SONAR_TOKEN=\$SONAR_TOKEN \
                             -v "${WORKSPACE}:/usr/src" \
                             sonarsource/sonar-scanner-cli \
-                            -Dsonar.projectKey=${SONAR_PROJECT_KEY} \
+                            -Dsonar.projectKey=appv1 \
                             -Dsonar.sources=/usr/src/appv1 \
                             -Dsonar.python.coverage.reportPaths=/usr/src/coverage.xml \
                             -Dsonar.working.directory=/tmp/sonar
