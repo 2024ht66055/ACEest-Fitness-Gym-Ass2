@@ -82,9 +82,9 @@ Overall, the project demonstrates how DevOps practices enhance automation, code 
 ```
 2024HT66055ASS2/
 │
-├── appv1.py                 # Version 1 of Flask application
-├── appv2.py                 # Stable version (used in deployments)
-├── appv3.py                 # Updated version (used for canary/green)
+├── app.py                 # Version 1 of Flask application
+├── appv1.py                 # Stable version (used in deployments)
+├── appv2.py                 # Updated version (used for canary/green)
 │
 ├── aceest_fitness.db        # SQLite database
 ├── requirements.txt         # Python dependencies
