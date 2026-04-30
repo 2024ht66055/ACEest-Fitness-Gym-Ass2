@@ -5,6 +5,7 @@
 - [Project Overview](#-project-overview)
 - [Features](#-features)
 - [Tech Stack](#-tech-stack)
+- [Project Structure](#-project-structure)
 - [Screenshots](#-screenshots)
 - [Conclusion](#-conclusion)
 
