@@ -153,7 +153,7 @@ http://127.0.0.1:5000/
 ---
 ## <img width="51" height="51" alt="history (3)" src="https://github.com/user-attachments/assets/34e9a68a-5633-43ba-9330-f649aa560322" />Version Control
 
-Multiple versions (v1, v2, v3) are managed using commits and tags
+Multiple versions (v1, v2) are managed using commits and tags
 
 ## 🧪 Running Tests (Pytest)
 
