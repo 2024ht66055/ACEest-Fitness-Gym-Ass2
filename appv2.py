@@ -1,7 +1,7 @@
 # ============================================
 # ACEest Fitness & Gym Management System
 # Version: v2
-# Description: Added delete client feature
+# Description: Improved UI and user experience
 # ============================================
 from flask import Flask, request
 import sqlite3
@@ -169,15 +169,17 @@ def get_workouts_for_client(client_name):
 #@app.route("/")
 #def home():
  #   return """
- #   <h1>ACEest Fitness Flask App</h1>
-  #  <p><a href="/init-db">Initialize Database</a></p>
-  #  <p><a href="/login">Go to Login</a></p>
-  #  <p><a href="/clients">Manage Clients</a></p>
-   # """
+#h1 style='color:blue;'>🏋️ ACEest Fitness Dashboard</h1>
+#<p>Welcome to the Gym Management System</p>
+#<hr>
+#<p><a href="/init-db">Initialize Database</a></p>
+#<p><a href="/login">Login</a></p>
+#<p><a href="/clients">Manage Clients</a></p>
+#"""
 #@app.route("/")
 #def home():
  #   return """
-  #  <h1>🔵 BLUE VERSION - ACEest Fitness Flask App</h1>
+  #  <h1>🟢 GREEN VERSION - ACEest Fitness Flask App</h1>
    # <p><a href="/init-db">Initialize Database</a></p>
     #<p><a href="/login">Go to Login</a></p>
     #<p><a href="/clients">Manage Clients</a></p>
@@ -185,7 +187,7 @@ def get_workouts_for_client(client_name):
 @app.route("/")
 def home():
     return """
-    <h1 style='color:blue'>🔵 BLUE VERSION - ACEest Fitness Flask App</h1>
+    <h1 style='color:green'>🟢 GREEN VERSION - ACEest Fitness Flask App</h1>
     <p><a href="/init-db">Initialize Database</a></p>
     <p><a href="/login">Go to Login</a></p>
     <p><a href="/clients">Manage Clients</a></p>
@@ -279,7 +281,7 @@ def clients():
 
     return html
 
-app.route("/client/<int:client_id>")
+@app.route("/client/<int:client_id>")
 def client_detail(client_id):
     client = get_client_by_id(client_id)
 
@@ -402,12 +404,3 @@ def client_workouts(client_id):
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000, debug=True)
-    # Route to delete a client
-@app.route("/delete-client/<int:client_id>")
-def delete_client(client_id):
-    conn = sqlite3.connect(DB_NAME)
-    cur = conn.cursor()
-    cur.execute("DELETE FROM clients WHERE id=?", (client_id,))
-    conn.commit()
-    conn.close()
-    return f"Client with ID {client_id} deleted successfully"

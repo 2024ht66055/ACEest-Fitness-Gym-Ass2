@@ -1,8 +1,11 @@
 # ============================================
 # ACEest Fitness & Gym Management System
-# Version: v3
-# Description: Improved UI and user experience
+# Description: Basic Flask application with client and workout management
 # ============================================
+from flask import Flask, request
+import sqlite3
+import random
+
 from flask import Flask, request
 import sqlite3
 import random
@@ -16,7 +19,7 @@ program_templates = {
     "Muscle Gain": ["Push/Pull/Legs", "Upper/Lower Split", "Full Body Strength"],
     "Beginner": ["Full Body 3x/week", "Light Strength + Mobility"]
 }
-
+# Function to initialize database
 def init_db():
     conn = sqlite3.connect(DB_NAME)
     cur = conn.cursor()
@@ -93,7 +96,7 @@ def init_db():
 
     conn.commit()
     conn.close()
-
+# Function to validate login credentials
 def check_login(username, password):
     conn = sqlite3.connect(DB_NAME)
     cur = conn.cursor()
@@ -104,7 +107,7 @@ def check_login(username, password):
     row = cur.fetchone()
     conn.close()
     return row
-
+# Function to fetch all clients
 def get_all_clients():
     conn = sqlite3.connect(DB_NAME)
     cur = conn.cursor()
@@ -166,32 +169,15 @@ def get_workouts_for_client(client_name):
     conn.close()
     return rows
 
-#@app.route("/")
-#def home():
- #   return """
-#h1 style='color:blue;'>🏋️ ACEest Fitness Dashboard</h1>
-#<p>Welcome to the Gym Management System</p>
-#<hr>
-#<p><a href="/init-db">Initialize Database</a></p>
-#<p><a href="/login">Login</a></p>
-#<p><a href="/clients">Manage Clients</a></p>
-#"""
-#@app.route("/")
-#def home():
- #   return """
-  #  <h1>🟢 GREEN VERSION - ACEest Fitness Flask App</h1>
-   # <p><a href="/init-db">Initialize Database</a></p>
-    #<p><a href="/login">Go to Login</a></p>
-    #<p><a href="/clients">Manage Clients</a></p>
-    #"""
 @app.route("/")
 def home():
     return """
-    <h1 style='color:green'>🟢 GREEN VERSION - ACEest Fitness Flask App</h1>
+    <h1>ACEest Fitness Flask App</h1>
     <p><a href="/init-db">Initialize Database</a></p>
     <p><a href="/login">Go to Login</a></p>
     <p><a href="/clients">Manage Clients</a></p>
     """
+
 @app.route("/init-db")
 def initialize_database():
     init_db()

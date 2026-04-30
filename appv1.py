@@ -1,12 +1,8 @@
 # ============================================
 # ACEest Fitness & Gym Management System
 # Version: v1
-# Description: Basic Flask application with client and workout management
+# Description: Added delete client feature
 # ============================================
-from flask import Flask, request
-import sqlite3
-import random
-
 from flask import Flask, request
 import sqlite3
 import random
@@ -20,7 +16,7 @@ program_templates = {
     "Muscle Gain": ["Push/Pull/Legs", "Upper/Lower Split", "Full Body Strength"],
     "Beginner": ["Full Body 3x/week", "Light Strength + Mobility"]
 }
-# Function to initialize database
+
 def init_db():
     conn = sqlite3.connect(DB_NAME)
     cur = conn.cursor()
@@ -97,7 +93,7 @@ def init_db():
 
     conn.commit()
     conn.close()
-# Function to validate login credentials
+
 def check_login(username, password):
     conn = sqlite3.connect(DB_NAME)
     cur = conn.cursor()
@@ -108,7 +104,7 @@ def check_login(username, password):
     row = cur.fetchone()
     conn.close()
     return row
-# Function to fetch all clients
+
 def get_all_clients():
     conn = sqlite3.connect(DB_NAME)
     cur = conn.cursor()
@@ -170,15 +166,30 @@ def get_workouts_for_client(client_name):
     conn.close()
     return rows
 
+#@app.route("/")
+#def home():
+ #   return """
+ #   <h1>ACEest Fitness Flask App</h1>
+  #  <p><a href="/init-db">Initialize Database</a></p>
+  #  <p><a href="/login">Go to Login</a></p>
+  #  <p><a href="/clients">Manage Clients</a></p>
+   # """
+#@app.route("/")
+#def home():
+ #   return """
+  #  <h1>🔵 BLUE VERSION - ACEest Fitness Flask App</h1>
+   # <p><a href="/init-db">Initialize Database</a></p>
+    #<p><a href="/login">Go to Login</a></p>
+    #<p><a href="/clients">Manage Clients</a></p>
+    #"""
 @app.route("/")
 def home():
     return """
-    <h1>ACEest Fitness Flask App</h1>
+    <h1 style='color:blue'>🔵 BLUE VERSION - ACEest Fitness Flask App</h1>
     <p><a href="/init-db">Initialize Database</a></p>
     <p><a href="/login">Go to Login</a></p>
     <p><a href="/clients">Manage Clients</a></p>
     """
-
 @app.route("/init-db")
 def initialize_database():
     init_db()
@@ -268,7 +279,7 @@ def clients():
 
     return html
 
-@app.route("/client/<int:client_id>")
+app.route("/client/<int:client_id>")
 def client_detail(client_id):
     client = get_client_by_id(client_id)
 
@@ -391,3 +402,12 @@ def client_workouts(client_id):
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000, debug=True)
+    # Route to delete a client
+@app.route("/delete-client/<int:client_id>")
+def delete_client(client_id):
+    conn = sqlite3.connect(DB_NAME)
+    cur = conn.cursor()
+    cur.execute("DELETE FROM clients WHERE id=?", (client_id,))
+    conn.commit()
+    conn.close()
+    return f"Client with ID {client_id} deleted successfully"
