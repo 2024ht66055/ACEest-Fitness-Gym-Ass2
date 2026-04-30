@@ -1,0 +1,4 @@
+ab-service.default.svc.cluster.local:80
+gym-service.default.svc.cluster.local:80
+kubernetes.default.svc.cluster.local:443
+myapp-service.default.svc.cluster.local:80
